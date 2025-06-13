@@ -1,0 +1,13 @@
+﻿@model Author
+<div class="container">
+    <div class="row justify-content-center">
+       <div>Author Id : <strong>@Model.Id</strong</div> 
+       <div>Author Name : <strong>@Model.Name</strong> </div>
+       <div>Author Books Count : <strong>@Model.Books.Count</strong>  </div>
+       <div>Author Created Date : <strong>@Model.CreatedDate</strong>  </div>
+       <div>Author Updated Date : <strong>@Model.UpdateDate</strong> </div>
+    </div>
+    <div class="btn btn-outline-primary">
+        <a asp-controller="Author" asp-action="index">Go Back</a>
+    </div>
+</div>

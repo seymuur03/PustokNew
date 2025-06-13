@@ -1,0 +1,38 @@
+﻿@model Blog
+<div class="container">
+    <div class="row justify-content-center">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Photo"></label>
+                <input asp-for="Photo" class="form-control">
+                <img style="width:150px;height=100px" id="ShowImg" src="" alt="" />
+                <span class="text-danger" asp-validation-for="Photo"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Descripton"></label>
+                <input asp-for="Descripton" class="form-control">
+                <span class="text-danger" asp-validation-for="Descripton"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AuthorName"></label>
+                <input asp-for="AuthorName" class="form-control">
+                <span class="text-danger" asp-validation-for="AuthorName"></span>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    @Html.Partial("ValidationPartialView")
+}

@@ -1,0 +1,16 @@
+﻿@model Blog
+<div class="container">
+    <div class="row justify-content-center">
+       <div>Blog Id : <strong>@Model.Id</strong</div> 
+       <div>Blog Image Name : <strong>@Model.ImageName</strong</div> 
+       <div>Blog Image : <img width="150" height="150" src="~/assets/image//others/@Model.ImageName" alt="" /> </div> 
+       <div>Blog Name : <strong>@Model.Name</strong> </div>
+       <div>Blog Description : <strong>@Model.Descripton</strong> </div>
+       <div>Blog AuthorName : <strong>@Model.AuthorName</strong> </div>
+       <div>Blog Created Date : <strong>@Model.CreatedDate</strong>  </div>
+       <div>Blog Updated Date : <strong>@Model.UpdateDate</strong> </div>
+    </div>
+    <div class="btn btn-outline-primary">
+        <a asp-controller="Blog" asp-action="index">Go Back</a>
+    </div>
+</div>

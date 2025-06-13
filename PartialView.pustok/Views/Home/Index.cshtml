@@ -1,0 +1,253 @@
+﻿@model HomeVm
+<!--=================================
+    Hero Area
+    ===================================== -->
+<section class="hero-area hero-slider-1">
+    <div class="sb-slick-slider" data-slick-setting='{
+                            "autoplay": true,
+                            "fade": true,
+                            "autoplaySpeed": 3000,
+                            "speed": 3000,
+                            "slidesToShow": 1,
+                            "dots":true
+                            }'>
+        @foreach (var slider in Model.Sliders)
+        {
+            <div class="single-slide @(slider.Order==1?"bg-shade-whisper":"bg-ghost-white") ">
+                <div class="container">
+                    <div class="home-content text-center text-sm-left position-relative">
+                        <div class="hero-partial-image @(slider.Order==1?"image-right":"image-left")">
+                            <img src="~/assets/image/bg-images/@slider.ImgName" alt="">
+                        </div>
+                        <div class="@(slider.Order==1?"row g-0":"row align-items-center justify-content-start justify-content-md-end")">
+                            <div class="col-xl-6 col-md-6 col-sm-7">
+                                <div class="home-content-inner @(slider.Order==1?"content-left-side":"content-right-side") text-start">
+                                    <h1>
+                                        @Html.Raw(slider.Name)
+                                    </h1>
+                                    <h2>@slider.Desc</h2>
+                                    <a href="@slider.ButtonLink" class="btn btn-outlined--primary">
+                                        @slider.ButtonText
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<!--=================================
+Home Features Section
+===================================== -->
+<section class="mb--30">
+    <div class="container">
+        <div class="row">
+            @foreach (var feature in Model.Features)
+            {
+                <div class="col-xl-3 col-md-6 mt--30">
+                    <div class="feature-box h-100">
+                        <div class="icon">
+                            <i class="@feature.IconName"></i>
+                        </div>
+                        <div class="text">
+                            <h5>@feature.Name</h5>
+                            <p>@feature.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+<!--=================================
+Promotion Section One
+===================================== -->
+<section class="section-margin">
+    <h2 class="sr-only">Promotion Section</h2>
+    <div class="container">
+        <div class="row space-db--30">
+            <div class="col-lg-6 col-md-6 mb--30">
+                <a href="#" class="promo-image promo-overlay">
+                    <img src="~/assets/image/bg-images/promo-banner-with-text.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 mb--30">
+                <a href="#" class="promo-image promo-overlay">
+                    <img src="~/assets/image/bg-images/promo-banner-with-text-2.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=================================
+Home Slider Tab
+===================================== -->
+<section class="section-padding">
+    <h2 class="sr-only">Home Tab Slider Section</h2>
+    <div class="container">
+        <div class="sb-custom-tab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="featured-tab" data-bs-toggle="tab" href="#featured" role="tab"
+                       aria-controls="featured" aria-selected="true">
+                        Featured Books
+                    </a>
+                    <span class="arrow-icon"></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="new-tab" data-bs-toggle="tab" href="#new" role="tab"
+                       aria-controls="new" aria-selected="true">
+                        New Books
+                    </a>
+                    <span class="arrow-icon"></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="discount-tab" data-bs-toggle="tab" href="#discount" role="tab"
+                       aria-controls="discount" aria-selected="false">
+                        Discount Books
+                    </a>
+                    <span class="arrow-icon"></span>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane show active" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+                    <div class="product-slider multiple-row  slider-border-multiple-row  sb-slick-slider"
+                         data-slick-setting='{
+                            "autoplay": true,
+                            "autoplaySpeed": 8000,
+                            "slidesToShow": 5,
+                            "rows":1,
+                            "dots":true
+                        }' data-slick-responsive='[
+                            {"breakpoint":1200, "settings": {"slidesToShow": 3} },
+                            {"breakpoint":768, "settings": {"slidesToShow": 2} },
+                            {"breakpoint":480, "settings": {"slidesToShow": 1} },
+                            {"breakpoint":320, "settings": {"slidesToShow": 1} }
+                        ]'>
+                        @Html.Partial("_BooksPartialView", Model.FeaturedBooks)
+                    </div>
+                </div>
+                <div class="tab-pane" id="new" role="tabpanel" aria-labelledby="new-tab">
+                    <div class="product-slider multiple-row  slider-border-multiple-row  sb-slick-slider"
+                         data-slick-setting='{
+                                        "autoplay": true,
+                                        "autoplaySpeed": 8000,
+                                        "slidesToShow": 5,
+                                        "rows":1,
+                                        "dots":true
+                                    }' data-slick-responsive='[
+                                        {"breakpoint":1200, "settings": {"slidesToShow": 3} },
+                                        {"breakpoint":768, "settings": {"slidesToShow": 2} },
+                                        {"breakpoint":480, "settings": {"slidesToShow": 1} },
+                                        {"breakpoint":320, "settings": {"slidesToShow": 1} }
+                                    ]'>
+                        @Html.Partial("_BooksPartialView", Model.NewBooks)
+                    </div>
+                </div>
+                <div class="tab-pane" id="discount" role="tabpanel" aria-labelledby="discount-tab">
+                    <div class="product-slider multiple-row  slider-border-multiple-row  sb-slick-slider"
+                         data-slick-setting='{
+                                        "autoplay": true,
+                                        "autoplaySpeed": 8000,
+                                        "slidesToShow": 5,
+                                        "rows":1,
+                                        "dots":true
+                                    }' data-slick-responsive='[
+                                        {"breakpoint":1200, "settings": {"slidesToShow": 3} },
+                                        {"breakpoint":768, "settings": {"slidesToShow": 2} },
+                                        {"breakpoint":480, "settings": {"slidesToShow": 1} },
+                                        {"breakpoint":320, "settings": {"slidesToShow": 1} }
+                                    ]'>
+                        @Html.Partial("_BooksPartialView", Model.DiscBooks)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=================================
+Deal of the day
+===================================== -->
+<section class="section-margin">
+    <div class="container-fluid">
+        <div class="promo-section-heading">
+            <h2>Deal of the day up to 20% off Special offer</h2>
+        </div>
+        <div class="product-slider with-countdown  slider-border-single-row sb-slick-slider" data-slick-setting='{
+                "autoplay": true,
+                "autoplaySpeed": 8000,
+                "slidesToShow": 6,
+                "dots":true
+            }' data-slick-responsive='[
+                {"breakpoint":1400, "settings": {"slidesToShow": 4} },
+                {"breakpoint":992, "settings": {"slidesToShow": 3} },
+                {"breakpoint":768, "settings": {"slidesToShow": 2} },
+                {"breakpoint":575, "settings": {"slidesToShow": 2} },
+                {"breakpoint":490, "settings": {"slidesToShow": 1} }
+            ]'>
+         
+        </div>
+    </div>
+</section>
+<!--=================================
+Best Seller Product
+
+<!--=================================
+Home Blog Slider
+===================================== -->
+<!--=================================
+Home Blog
+===================================== -->
+<section class="section-margin">
+    <div class="container">
+        <div class="section-title">
+            <h2>LATEST BLOGS</h2>
+        </div>
+        <div class="blog-slider sb-slick-slider" data-slick-setting='{
+                "autoplay": true,
+                "autoplaySpeed": 8000,
+                "slidesToShow": 2,
+                "dots": true
+            }' data-slick-responsive='[
+                {"breakpoint":1200, "settings": {"slidesToShow": 1} }
+            ]'>
+            @foreach (var b in Model.Blogs)
+            {
+                <div class="single-slide">
+                    <div class="blog-card">
+                        <div class="image">
+                            <img src="~/assets/image/others/@b.ImageName" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="content-header">
+                                <div class="date-badge">
+                                    <span class="date">
+                                       @b.CreatedDate
+                                   
+                                    </span>
+                                </div>
+                                <h3 class="title">
+                                    <a asp-action="detail" asp-controller="blog" asp-route-id="@b.Id">@b.Name</a>
+                                </h3>
+                            </div>
+                            <p class="meta-para"><i class="fas fa-user-edit"></i>Post by <a href="#">@b.AuthorName</a></p>
+                            <article class="blog-paragraph">
+                                <h2 class="sr-only">blog-paragraph</h2>
+                                <p>
+                                    @b.Descripton
+                                </p>
+                            </article>
+                            <a asp-action="detail" asp-controller="blog" asp-route-id="@b.Id" class="card-link">
+                                Read More <i class="fas fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

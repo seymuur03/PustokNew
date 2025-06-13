@@ -1,0 +1,272 @@
+﻿@model BookDetailVm
+
+
+<section class="breadcrumb-section">
+    <h2 class="sr-only">Site Breadcrumb</h2>
+    <div class="container">
+        <div class="breadcrumb-contents">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Product Details</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+<main class="inner-page-sec-padding-bottom">
+    <div class="container">
+        <div class="row  mb--60">
+            <div class="col-lg-5 mb--30">
+                <!-- Product Details Slider Big Image-->
+                <div class="product-details-slider sb-slick-slider arrow-type-two" data-slick-setting='{
+              "slidesToShow": 1,
+              "arrows": false,
+              "fade": true,
+              "draggable": false,
+              "swipe": false,
+              "asNavFor": ".product-slider-nav"
+              }'>
+                    @foreach (var bImage in Model.Book.BookImages)
+                    {
+                        <div class="single-slide">
+                            <img src="~/assets/image/products/@bImage.ImgName" alt="">
+                        </div>
+                    }
+                </div>
+                <!-- Product Details Slider Nav -->
+                <div class="mt--30 product-slider-nav sb-slick-slider arrow-type-two" data-slick-setting='{
+            "infinite":true,
+              "autoplay": true,
+              "autoplaySpeed": 8000,
+              "slidesToShow": 4,
+              "arrows": true,
+              "prevArrow":{"buttonClass": "slick-prev","iconClass":"fa fa-chevron-left"},
+              "nextArrow":{"buttonClass": "slick-next","iconClass":"fa fa-chevron-right"},
+              "asNavFor": ".product-details-slider",
+              "focusOnSelect": true
+              }'>
+                    @foreach (var bImage in Model.Book.BookImages)
+                    {
+                        <div class="single-slide">
+                            <img src="~/assets/image/products/@bImage.ImgName" alt="">
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="product-details-info pl-lg--30 ">
+                    <p class="tag-block">Tags: <a href="#">@string.Join(",",Model.Book.BookTags.Select(bt=>bt.Tag.Name))</a></p>
+                    <h3 class="product-title">@Model.Book.Title</h3>
+                    <ul class="list-unstyled">
+                        <li>Genres: <a href="#" class="list-value font-weight-bold"> @Model.Book.Genre.Name</a></li>
+                        <li>Product Code: <span class="list-value"> @Model.Book.PCode</span></li>
+                        <li>Availability: <span class="list-value"> @(@Model.Book.InStock==true?"In Stockk":"Not in Stock")</span></li>
+                    </ul>
+                    <div class="price-block">
+                        @if (Model.Book.Discount > 0)
+                        {
+                            <span class="price">£@((Model.Book.Price - ((Model.Book.Price * Model.Book.Discount) / 100)).ToString("0.00"))</span>
+                            <del class="price-old">£@Model.Book.Price.ToString("0.##")</del>
+                        }
+                        else
+                        {
+                            <span class="price">£@Model.Book.Price</span>
+                        }
+                    </div>
+                    <div class="rating-widget">
+                        <div class="rating-block">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (Model.AverageRate >= i)
+                                {
+                                    <span class="fas fa-star star_on"></span>
+                                }
+                                else if (Model.AverageRate >=(decimal)i - 0.5m)
+                                {
+                                    <span class="fas fa-star-half-alt star_on"></span>
+                                }
+                                else
+                                {
+                                    <span class="far fa-star"></span>
+                                }
+                            }
+                           
+                        </div>
+                        <div class="review-widget">
+                            <a href="#">(@Model.TotalComments Reviews)</a> <span>|</span>
+                            <a href="#">Write a review</a>
+                        </div>
+                    </div>
+                    <article class="product-details-article">
+                        <h4 class="sr-only">Product Summery</h4>
+                        <p>
+                           @Model.Book.Description
+                        </p>
+                    </article>
+                    <div class="add-to-cart-row">
+                        <div class="count-input-block">
+                            <span class="widget-label">Qty</span>
+                            <input type="number" class="form-control text-center" value="1">
+                        </div>
+                        <div class="add-cart-btn">
+                            <a href="#" class="btn btn-outlined--primary">
+                                <span class="plus-icon">+</span>Add to
+                                Cart
+                            </a>
+                        </div>
+                    </div>
+                    <div class="compare-wishlist-row">
+                        <a href="#" class="add-link"><i class="fas fa-heart"></i>Add to Wish List</a>
+                        <a href="#" class="add-link"><i class="fas fa-random"></i>Add to Compare</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sb-custom-tab review-tab section-padding">
+            <ul class="nav nav-tabs nav-style-2" id="myTab2" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tab1" data-bs-toggle="tab" href="#tab-1" role="tab"
+                       aria-controls="tab-1" aria-selected="true">
+                        DESCRIPTION
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab2" data-bs-toggle="tab" href="#tab-2" role="tab"
+                       aria-controls="tab-2" aria-selected="true">
+                        REVIEWS (@Model.TotalComments)
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content space-db--20" id="myTabContent">
+                
+                <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab2">
+                    <div class="review-wrapper">
+                        <h2 class="title-lg mb--20">@Model.TotalComments REVIEWS FOR @Model.Book.Title </h2>
+                        @foreach (var bComment in Model.Book.BookComments)
+                        {
+                            <div class="review-comment mb--20">
+                                <div class="text">
+                                    <div class="rating-block mb--15">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            if (Model.AverageRate >= i)
+                                            {
+                                                <span class="fas fa-star star_on"></span>
+                                            }
+                                            else if (Model.AverageRate >= (decimal)i - 0.5m)
+                                            {
+                                                <span class="fas fa-star-half-alt star_on"></span>
+                                            }
+                                            else
+                                            {
+                                                <span class="far fa-star"></span>
+                                            }
+                                        }
+
+                                    </div>
+                                    <h6 class="author">
+                                        @bComment.AppUser.UserName – <span class="font-weight-400">@bComment.CreatedDate</span>
+                                    </h6>
+                                    <p>
+                                        @bComment.Text;
+                                    </p>
+                                    @if(User.Identity.IsAuthenticated){
+                                        if (User.Identity.Name == bComment.AppUser.UserName)
+                                        {
+                                            <a class="btn-outlined--primary" asp-action="deletecomment" asp-route-id="@bComment.Id"> Delete Comment </a>
+                                        }
+
+                                    }
+                                </div>
+                            </div>
+                        }
+                      @if(!Model.HasComment){
+                            <h2 class="title-lg mb--20 pt--15">ADD A REVIEW</h2>
+                            <div class="rating-row pt-2">
+                                <p class="d-block">Your Rating</p>
+                                <span class="rating-widget-block">
+                                    <input form="commentForm" type="radio" value="5" asp-for="@Model.BookComment.Rate" id="star1">
+                                    <label for="star1"></label>
+                                    <input form="commentForm" type="radio" value="4" asp-for="@Model.BookComment.Rate" id="star2">
+                                    <label for="star2"></label>
+                                    <input form="commentForm" type="radio" value="3" asp-for="@Model.BookComment.Rate" id="star3">
+                                    <label for="star3"></label>
+                                    <input form="commentForm" type="radio" value="2" asp-for="@Model.BookComment.Rate" id="star4">
+                                    <label for="star4"></label>
+                                    <input form="commentForm" type="radio" value="1" asp-for="@Model.BookComment.Rate" id="star5">
+                                    <label for="star5"></label>
+                                </span>
+                                <form id="commentForm" asp-action="addcomment" class="mt--15 site-form ">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="message">Comment</label>
+                                                <input type="hidden" asp-for="@Model.BookComment.BookId" value="@Model.Book.Id" />
+                                                <input asp-for="@Model.BookComment.Text" id="message"
+                                                          class="form-control">
+                                                        <span class="text-danger" asp-validation-for="@Model.BookComment.Text"></span>  
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <div class="submit-btn">
+                                                <button type="submit" class="btn btn-black">Post Comment</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="tab-product-details">
+          <div class="brand">
+            <img src="image/others/review-tab-product-details.jpg" alt="">
+          </div>
+          <h5 class="meta">Reference <span class="small-text">demo_5</span></h5>
+          <h5 class="meta">In stock <span class="small-text">297 Items</span></h5>
+          <section class="product-features">
+            <h3 class="title">Data sheet</h3>
+            <dl class="data-sheet">
+              <dt class="name">Compositions</dt>
+              <dd class="value">Viscose</dd>
+              <dt class="name">Styles</dt>
+              <dd class="value">Casual</dd>
+              <dt class="name">Properties</dt>
+              <dd class="value">Maxi Dress</dd>
+            </dl>
+          </section>
+        </div> -->
+    </div>
+    <!--=================================
+        RELATED PRODUCTS BOOKS
+    ===================================== -->
+    <section class="">
+        <div class="container">
+            <div class="section-title section-title--bordered">
+                <h2>RELATED PRODUCTS</h2>
+            </div>
+            <div class="product-slider sb-slick-slider slider-border-single-row" data-slick-setting='{
+                "autoplay": true,
+                "autoplaySpeed": 8000,
+                "slidesToShow": 4,
+                "dots":true
+            }' data-slick-responsive='[
+                {"breakpoint":1200, "settings": {"slidesToShow": 4} },
+                {"breakpoint":992, "settings": {"slidesToShow": 3} },
+                {"breakpoint":768, "settings": {"slidesToShow": 2} },
+                {"breakpoint":480, "settings": {"slidesToShow": 1} }
+            ]'>
+               @Html.Partial("_BooksPartialView",Model.RelatedBooks)
+            </div>
+        </div>
+    </section>
+
+    @section scripts
+    {
+        @Html.Partial("ValidationPartialView")
+    }
