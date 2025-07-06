@@ -7,28 +7,16 @@
       "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\views\\chat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\areas\\manage\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\areas\\manage\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\services\\layoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\services\\layoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\services\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\services\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|c:\\users\\hp\\onedrive\\desktop\\pustokkkkkkkk\\pustok\\partialview.pustok\\areas\\manage\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C799AB69-4FC4-4F53-88ED-C550FD9AB838}|PartialView.pustok\\PartialView.pustok.csproj|solutionrelative:partialview.pustok\\areas\\manage\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +26,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PartialView.pustok\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PartialView.pustok\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAEYCAAAAAAAAAAAAAFMCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-06T08:30:22.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Areas\\Manage\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "PartialView.pustok\\Areas\\Manage\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Areas\\Manage\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "PartialView.pustok\\Areas\\Manage\\Views\\Order\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACEAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-06T08:09:26.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Areas\\Manage\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "PartialView.pustok\\Areas\\Manage\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Areas\\Manage\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "PartialView.pustok\\Areas\\Manage\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAYwDIAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T08:08:20.297Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -48,82 +72,10 @@
               "RelativeDocumentMoniker": "PartialView.pustok\\Views\\Chat\\Index.cshtml",
               "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Views\\Chat\\Index.cshtml",
               "RelativeToolTip": "PartialView.pustok\\Views\\Chat\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACMAAABIAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAG4AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T08:42:39.034Z",
+              "WhenOpened": "2025-06-22T07:24:37.822Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChatController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Controllers\\ChatController.cs",
-              "RelativeDocumentMoniker": "PartialView.pustok\\Controllers\\ChatController.cs",
-              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Controllers\\ChatController.cs",
-              "RelativeToolTip": "PartialView.pustok\\Controllers\\ChatController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T08:42:29.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LayoutService.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Services\\LayoutService.cs",
-              "RelativeDocumentMoniker": "PartialView.pustok\\Services\\LayoutService.cs",
-              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Services\\LayoutService.cs",
-              "RelativeToolTip": "PartialView.pustok\\Services\\LayoutService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwBwAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T08:41:29.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Program.cs",
-              "RelativeDocumentMoniker": "PartialView.pustok\\Program.cs",
-              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Program.cs",
-              "RelativeToolTip": "PartialView.pustok\\Program.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwCEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T08:39:23.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Services\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "PartialView.pustok\\Services\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Services\\ServiceRegistration.cs",
-              "RelativeToolTip": "PartialView.pustok\\Services\\ServiceRegistration.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwDgAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T08:38:46.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Hubs\\ChatHub.cs",
-              "RelativeDocumentMoniker": "PartialView.pustok\\Hubs\\ChatHub.cs",
-              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Hubs\\ChatHub.cs",
-              "RelativeToolTip": "PartialView.pustok\\Hubs\\ChatHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T08:38:13.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "PartialView.pustok\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Desktop\\Pustokkkkkkkk\\Pustok\\PartialView.pustok\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "PartialView.pustok\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAA2wDIAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T08:37:19.79Z"
             }
           ]
         }

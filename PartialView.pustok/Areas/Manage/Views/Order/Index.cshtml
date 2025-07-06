@@ -1,0 +1,123 @@
+﻿@model PaginatedList<Order>
+@{
+    int count = 1;
+}
+<table class="table">
+    <a class="btn btn-success" asp-action="create" asp-controller="Order">
+        Create
+    </a>
+    <thead>
+        <tr>
+            <th scope="col">Count</th>
+            <th scope="col">User Name</th>
+            <th scope="col">ZipCode</th>
+            <th scope="col">Status</th>
+            <th scope="col">Status Position</th>
+            <th scope="col">Created_Date</th>
+            <th scope="col">Updated_Date</th>
+            <th scope="col">Settings</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Order in Model)
+        {
+            <tr>
+                <th>@count</th>
+                <td>@Order.AppUser.UserName</td>
+                <td>@Order.ZipCode</td>
+                <td>@Order.OrderStatus</td>
+                <td>@if (Order.OrderStatus == OrderStatus.Pending)
+                    {
+                        <a class="btn btn-success" asp-action="accept" asp-controller="Order" asp-route-id="@Order.Id">
+                            Accept
+                        </a>
+                        <a class="btn btn-danger" asp-action="reject" asp-controller="Order" asp-route-id="@Order.Id">
+                            Reject
+                        </a>
+                    }
+                    else
+                    {
+                        <p>no need</p>
+                    }
+                </td>
+                <td>@Order.CreatedDate.ToString("MM dddd,yyyy")</td>
+                <td>@Order.UpdateDate?.ToString("MM dddd,yyyy")</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="edit" asp-controller="Order" asp-route-id="@Order.Id">
+                        Edit
+                    </a>
+                    <a class="btn btn-primary" asp-action="detail" asp-controller="Order" asp-route-id="@Order.Id">
+                        Details
+                    </a>
+                    <a asp-area="Manage" asp-action="Delete" asp-controller="Order" asp-route-id="@Order.Id" class="btn btn-danger deleteOrder">
+                        Delete
+                    </a>
+                </td>
+
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>
+
+
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(Model.HasPrevious?"":"disabled")">
+            @* @(ViewBag.currentPage==1?"disabled":"") hec hasprevious propertysi teyin elemeden de bele bir sey yazmaq olardi *@
+            <a class="page-link" asp-action="index" asp-controller="Order" asp-route-page="@(Model.CurentPage-1)" tabindex="-1">Previous</a>
+        </li>
+
+        @for (int i = Model.First; i <= Model.Last; i++)
+        {
+            <li class="page-item @(Model.CurentPage==@i?"disabled":"")"><a class="page-link  " asp-action="index" asp-route-page="@i">@i</a></li>
+        }
+
+        <li class="page-item @(Model.HasNext?"":"disabled")">
+            @* @(ViewBag.currentPage==ViewBag.pageCount?"disabled":"") buda hasNext olmadan yazilis *@
+            <a class="page-link" asp-action="index" asp-controller="Order" asp-route-page="@(Model.CurentPage+1)">Next</a>
+        </li>
+    </ul>
+</nav>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('.deleteOrder').on('click', function (e) {
+                e.preventDefault();
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        var url = $(this).attr('href');
+                        fetch(url).then(response => {
+                            if (response.ok) {
+                                Swal.fire({
+                                    title: "Deleted!",
+                                    text: "Your file has been deleted.",
+                                    icon: "success"
+                                });
+                                window.location.reload();
+                            } else {
+                                Swal.fire({
+                                    icon: "error",
+                                    title: "Oops...",
+                                    text: "Something went wrong!",
+                                });
+                            }
+                        })
+
+
+                    }
+                });
+            })
+        })
+    </script>
+}

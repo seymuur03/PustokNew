@@ -1,26 +1,48 @@
-﻿@page
+﻿@{
+    var users = (List<AppUser>)ViewBag.Users;
+}
 <div class="container">
-    <div class="row p-1">
-        <div class="col-1">User</div>
-        <div class="col-5"><input type="text" id="userInput" /></div>
-    </div>
-    <div class="row p-1">
-        <div class="col-1">Message</div>
-        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
-    </div>
-    <div class="row p-1">
-        <div class="col-6 text-end">
-            <input type="button" id="sendButton" value="Send Message" />
-        </div>
-    </div>
-    <div class="row p-1">
+    <div class="row">
         <div class="col-6">
-            <hr />
+            <div class="row p-1">
+                <div class="col-1">User</div>
+                <div class="col-5"><input type="text" id="userInput" /></div>
+            </div>
+            <div class="row p-1">
+                <div class="col-1">Message</div>
+                <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+            </div>
+            <div class="row p-1">
+                <div class="col-6 text-end">
+                    <input type="button" id="sendButton" value="Send Message" />
+                </div>
+            </div>
+            <div class="row p-1">
+                <div class="col-6">
+                    <hr />
+                </div>
+            </div>
+            <div class="row p-1">
+                <div class="col-6">
+                    <ul id="messagesList"></ul>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row p-1">
         <div class="col-6">
-            <ul id="messagesList"></ul>
+            <ul class="list-group list-group-flush">
+                @foreach (var u in users)
+                {
+                    <li id="@u.Id" class="list-group-item">
+                        <span style=" display:inline-block;
+            width:15px;
+            height:15px;
+            border-radius:50%;" class="@(u.ConnectionId!= null?"online":"offline")"> </span> @u.FullName
+                        <a class="btn btn-primary send-message-btn" data-userid="@u.Id" data-username="@u.UserName">SEND MESSAGE</a>
+
+                    </li>
+
+                }
+            </ul>
         </div>
     </div>
 </div>
@@ -45,5 +67,68 @@
             // should be aware of possible script injection concerns.
             li.textContent = `${a} : ${b}`;
         })
+
+        connection.on("UserConnect",function(id){
+            document.getElementById(id).firstElementChild.classList.add("online")
+            document.getElementById(id).firstElementChild.classList.remove("offline")
+        })
+
+        connection.on("UserDisConnect", function (id) {
+            document.getElementById(id).firstElementChild.classList.add("offline")
+            document.getElementById(id).firstElementChild.classList.remove("online")
+        })
+
+        connection.on("SendMessage", function (id) {
+            alert("send")
+        })
+
+        connection.on("OrderAccepted", function (id) {
+
+            toastr["success"]("Order accept succesfully!")
+
+            toastr.options = {
+                "closeButton": false,
+                "debug": false, 
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+        })
+
+        connection.on("OrderRejected", function (id) {
+
+            toastr["warning"]("Order Rejected!")
+
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+        })
+
     </script>
 }

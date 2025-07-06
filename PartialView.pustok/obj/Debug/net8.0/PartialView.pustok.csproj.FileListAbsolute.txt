@@ -1171,3 +1171,4 @@ C:\Users\Hp\OneDrive\Desktop\Pustokkkkkkkk\Pustok\PartialView.pustok\obj\Debug\n
 C:\Users\Hp\OneDrive\Desktop\Pustokkkkkkkk\Pustok\PartialView.pustok\obj\Debug\net8.0\PartialView.pustok.pdb
 C:\Users\Hp\OneDrive\Desktop\Pustokkkkkkkk\Pustok\PartialView.pustok\obj\Debug\net8.0\PartialView.pustok.genruntimeconfig.cache
 C:\Users\Hp\OneDrive\Desktop\Pustokkkkkkkk\Pustok\PartialView.pustok\obj\Debug\net8.0\ref\PartialView.pustok.dll
+C:\Users\Hp\OneDrive\Desktop\Pustokkkkkkkk\Pustok\PartialView.pustok\obj\Debug\net8.0\PartialView.pustok.sourcelink.json
